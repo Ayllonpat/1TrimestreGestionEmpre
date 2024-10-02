@@ -56,11 +56,15 @@ print(recortar(15,0,10))
 def separar(lista):
     pares = []
     impares= []
-    if (lista % 2) == 0:
-        pares.append(lista)        
-    else:
-        impares.append(lista)
+    for num in lista:
+        if num % 2 == 0:
+            pares.append(num)
+        else:
+            impares.append(num)
+    
+    return pares, impares
         
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]    
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
+pares, impares = separar(lista)  
 
-print(separar())
+print(separar(lista))
